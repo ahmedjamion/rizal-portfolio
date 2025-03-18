@@ -1,0 +1,46 @@
+<nav class="">
+  <ul
+    class="flex flex-col items-end gap-4 overflow-hidden p-2 text-lg text-nowrap md:flex-row lg:text-xl"
+  >
+    <li class="group relative">
+      <a routerLink="home" routerLinkActive #home="routerLinkActive">Home</a>
+      <div
+        class="absolute h-1 bg-black transition-all duration-300 ease-in-out group-hover:w-full"
+        [ngClass]="home.isActive ? 'w-full' : 'w-0'"
+      ></div>
+    </li>
+    <li class="group relative">
+      <a
+        routerLink="about-rizal"
+        routerLinkActive
+        #aboutrizal="routerLinkActive"
+        >About Rizal</a
+      >
+      <div
+        class="absolute h-1 bg-black transition-all duration-300 ease-in-out group-hover:w-full"
+        [ngClass]="aboutrizal.isActive ? 'w-full' : 'w-0'"
+      ></div>
+    </li>
+    <li class="group relative">
+      <a routerLink="about-me" routerLinkActive #aboutme="routerLinkActive"
+        >About Me</a
+      >
+      <div
+        class="absolute h-1 bg-black transition-all duration-300 ease-in-out group-hover:w-full"
+        [ngClass]="aboutme.isActive ? 'w-full' : 'w-0'"
+      ></div>
+    </li>
+    <li class="group relative">
+      <a
+        routerLink="my-classworks"
+        routerLinkActive
+        #myclassworks="routerLinkActive"
+        >My Classworks</a
+      >
+      <div
+        class="absolute h-1 bg-black transition-all duration-300 ease-in-out group-hover:w-full"
+        [ngClass]="myclassworks.isActive ? 'w-full' : 'w-0'"
+      ></div>
+    </li>
+  </ul>
+</nav>
