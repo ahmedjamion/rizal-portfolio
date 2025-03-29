@@ -1,12 +1,8 @@
 import { NgClass } from '@angular/common';
 import { Component, HostListener, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
-import {
-  heroBars3,
-  heroXMark,
-  heroChevronUp,
-} from '@ng-icons/heroicons/outline';
+import { heroBars3, heroXMark } from '@ng-icons/heroicons/outline';
 import { NavComponent } from '../nav/nav.component';
 
 @Component({
@@ -18,21 +14,18 @@ import { NavComponent } from '../nav/nav.component';
 export class HeaderComponent {
   menuIcon = heroBars3;
   closeIcon = heroXMark;
-  chevronUpIcon = heroChevronUp;
   isScreenSmall = signal(false);
-  isNavShown = signal(true);
-  ngOnInit() {
-    this.isScreenSmall.set(window.innerWidth < 768);
-    this.isNavShown.set(!this.isScreenSmall());
-  }
+  isNavVisible = signal(false);
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
     this.isScreenSmall.set(window.innerWidth < 768);
-    this.isNavShown.set(!this.isScreenSmall());
+    if (!this.isScreenSmall) {
+      this.isNavVisible.set(false);
+    }
   }
 
   toggleNav() {
-    this.isNavShown.set(!this.isNavShown());
+    this.isNavVisible.set(!this.isNavVisible());
   }
 }
