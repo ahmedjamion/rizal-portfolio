@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { HomeLinkComponent } from '../../components/home-link/home-link.component';
+import { PageCardComponent } from '../../components/page-card/page-card.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HomeLinkComponent],
+  imports: [PageCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

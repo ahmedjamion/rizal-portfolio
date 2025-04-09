@@ -2,12 +2,12 @@ import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home-link',
+  selector: 'app-page-card',
   imports: [RouterLink],
-  templateUrl: './home-link.component.html',
-  styleUrl: './home-link.component.css',
+  templateUrl: './page-card.component.html',
+  styleUrl: './page-card.component.css',
 })
-export class HomeLinkComponent {
+export class PageCardComponent {
   @Input() image = '';
   @Input() title = '';
   @Input() link = '';
