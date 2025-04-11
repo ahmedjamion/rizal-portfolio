@@ -1,10 +1,10 @@
 <div
-  class="flex h-32 cursor-pointer items-center gap-4 rounded-md bg-amber-100 pr-4 transition-all duration-300 ease-in-out hover:brightness-110"
+  class="flex h-32 w-full cursor-pointer items-center gap-4 rounded-xl bg-white/90 pr-4 transition-all duration-300 ease-in-out hover:bg-white"
   routerLink="{{ link }}"
 >
   <img
     [src]="image"
-    class="h-32 w-32 rounded-l-md object-cover object-top"
+    class="aspect-square h-32 rounded-l-xl object-cover object-top"
     [alt]="alt"
   />
   <p>{{ title }}</p>

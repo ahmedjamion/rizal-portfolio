@@ -1,24 +1,31 @@
-<div
-  class="grid h-auto w-full grid-cols-1 place-items-center gap-4 p-4 md:h-full md:grid-cols-2"
->
-  <img
-    src="images/about-me.jpg"
-    alt="Portrait of Rizal"
-    class="aspect-square w-1/2 object-cover object-top"
-  />
-  <p
-    class="max-w-md grow basis-0 rounded-2xl p-4 text-justify indent-8 text-white backdrop-brightness-50"
-  >
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-    laboriosam necessitatibus natus doloribus quam iusto quasi sunt obcaecati
-    maiores consequuntur nesciunt magni saepe, repudiandae unde facere
-    distinctio sequi! Vitae expedita laborum rerum, ab quibusdam velit,
-    excepturi quod voluptas laudantium assumenda ipsam, et temporibus in odio
-    dicta recusandae perspiciatis tenetur blanditiis! Cumque aspernatur ut
-    repudiandae enim molestiae ipsum, minima pariatur, voluptates qui, provident
-    excepturi officiis officia quidem tenetur rem asperiores in quae iste
-    distinctio nihil. At debitis numquam autem velit error sunt dicta
-    consequatur earum vitae nam quidem omnis pariatur asperiores molestiae
-    impedit illum necessitatibus unde culpa, quas corrupti odio? Deserunt.
-  </p>
+<div class="grid gap-4 p-4">
+  <h3 class="text-center text-3xl font-bold text-white">About Me</h3>
+  <div class="grid h-auto grid-cols-1 place-items-center gap-4">
+    <app-about-card
+      image="images/about-me.jpg"
+      content="Hi, my name is Ahmed Rashad I. Jamion, a third-year Bachelor of Science in Information Technology student from Section 3A at the College of Information and Computing Sciences, Zamboanga Peninsula Polytechnic State University. I am currently enrolled in the course Life, Works, and Writings of Rizal, and this online portfolio was created as a requirement for the subject. It showcases my insights and learnings throughout the course."
+    />
+    <div class="flex gap-4">
+      <a
+        class="rounded-full bg-white/90 px-4 py-2 text-center hover:bg-white"
+        routerLink="/home"
+      >
+        Home
+      </a>
+
+      <a
+        class="rounded-full bg-white/90 px-4 py-2 text-center hover:bg-white"
+        routerLink="/about-rizal"
+      >
+        About Rizal
+      </a>
+
+      <a
+        class="rounded-full bg-white/90 px-4 py-2 text-center hover:bg-white"
+        routerLink="/my-classworks"
+      >
+        My Classworks
+      </a>
+    </div>
+  </div>
 </div>
